@@ -26,4 +26,20 @@ DO NOT use a recursive solution to this problem. Your solution must run in linea
 
 nthFibonacci = function(n) {  
  // your code here
+ var arr = [0,1]
+ 	if(n === 0){
+ 	 arr.push(0);
+ 	}
+ 	if(n === 1){
+ 	 arr.push(1);
+ 	}
+ 	if(n > 1){
+
+ for (var i = 2 ; i <= n ; i++){
+ 	//debugger
+ 	 arr.push((arr[i - 1]) + (arr[i - 2]));
+ 		}
+ 	}
+ 	//console.log(arr)
+  return arr[n]
 };
