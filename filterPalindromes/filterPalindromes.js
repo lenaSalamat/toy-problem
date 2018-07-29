@@ -9,7 +9,16 @@
 
 
 
-function filterPalindromes (words) {
+function filterPalindromes(words) {
   // Write your code here, and
   // return your final answer.
+var arr=[];
+for(var i=0 ; i < words.length ; i++){
+var str=words[i].toLowerCase().replace(/\s/g,'');
+var palindromes = str.split("").reverse().join("");
+  if(str === palindromes){
+  	arr.push(words[i].substring(str))
+}
+}
+    return arr;
 }
