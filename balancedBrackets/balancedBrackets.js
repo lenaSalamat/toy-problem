@@ -12,8 +12,23 @@
 //input:"[{]}"	
 //output:false
 
-function isBalanced (str) {
-  // Write your code here, and
-  // return your final answer.
+function isBalanced (string) {
+  var arr = [];
+  for(var i = 0 ; i < string.length ; i++){
+    if(string[i] === '{' ){
+      arr.push('}');
+  } else if(string[i] === '(' ){
+      arr.push(')');
+  } else if(string[i] === '[' ){
+      arr.push(']');
+  } else if(string[i] === '}' || string[i] === ']' || string[i] === ')'){
+      if(arr.pop() !== string[i]) {
+        return false;
+      }
+    }
+  }
+  if(arr.length) {
+     return false;
+  }
+  return true;
 }
-
