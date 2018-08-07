@@ -15,9 +15,26 @@ A stable sort must return {value: 5, order: 1}, {value:5, order: 2} in that orde
 //input:[ { "value": 10 }, { "value": 5, "order": 1 }, { "value": 5, "order": 2 } ]
 //output:[ { "value": 5, "order": 1 }, { "value": 5, "order": 2 }, { "value": 10 } ]
 
-function insertionSort (array) {
-  // Write your code here, and
-  // return your final answer.
-  
+function insertionSort(array){
+// Write your code here, and
+// return your final answer.
+var arr;
+ for(var i = 0 ; i < array.length ; i++){
+ for(var j = 0 ; j < array.length ; j++){
+  //if(typeof array[i] === 'object'){
+    for(var key in array[i]){
+    for(var key in array[j]){
+    if (array[i][key] < array[j][key]){
+            arr = array[i];
+            array[i] = array[j];
+            array[j] = arr;
+          //}
+        }
+      }  
+    }
+  }
 }
+  return array;
+ 
+};
 
