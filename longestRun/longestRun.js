@@ -20,9 +20,29 @@ If there are two runs of equal length, return the first one. Return [0,0] for no
 
 
 function longestRun (string) {
-
-
-
-
-
+  var longest = 0;
+  var FinalResult=[0,0];
+  var counter = 0;
+  var start = true;
+  var result = [0,0]
+  for ( var i = 1; i < string.length; i++ ) {
+    if (string[i-1] === string[i]) {
+       counter++;
+        if (start) {
+          result = [i - 1, i];
+          start = false;
+        } else {
+           result[1] = i 
+        }
+        if (counter > longest) {
+          longest = counter;
+          FinalResult = result;
+        }
+       
+    } else {
+      counter = 0;
+      start = true;
+    }
+  }
+  return FinalResult;      
 }
