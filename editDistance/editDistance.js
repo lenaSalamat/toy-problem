@@ -20,6 +20,16 @@ str1:
 str2:
 "hackreactor"	    6 */
 function editDistance (str1, str2) {
-
-	
+  // Write your code here, and
+  // return your final answer.
+  var counter = 0;
+   for(var i = 0 ; i < str1.length ; i++){
+      if(str1[i] !== str2[i]){
+        counter++;
+      }
+    }
+    if(counter === str1.length){
+    counter = str2.length-1;
+  }
+   return counter;
 }
