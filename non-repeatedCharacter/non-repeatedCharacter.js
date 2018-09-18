@@ -21,5 +21,19 @@ string:
 */
 
 function firstNonRepeatedCharacter (string) {
-   // write your code here
+  var str = '';
+  var count = 0;
+  for(var i = 0 ; i < string.length ; i++){
+    count = 0;
+  for(var j = 0 ; j < string.length ; j++){
+    if(string[i] === string[j]){
+    count++;
+    }
+  }
+  if(count === 1){
+    str += string[i];
+  return str;
+    }
+  }
+  return "sorry";
 }
