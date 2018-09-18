@@ -20,4 +20,18 @@ str:                  |
 
 function onlyUnique (str) {
    // your code is here
+   var string='';
+  count=0;
+  for(var i=0;i<str.length;i++){
+    count=0;
+    for(var j=0;j<str.length;j++){
+    if(str[i]===str[j]){
+      count++;
+    }
+  }
+  if(count===1){
+    string +=str[i];
+  }
+  }
+  return string;
 }	

@@ -11,9 +11,21 @@
 
 
 
-function evenOccurrence (arr) {
+ function evenOccurrence (arr) {
   // Write your code here, and
   // return your final answer.
+  var count=0;
+for (var i = 0 ; i < arr.length ; i++) {
+    for (var j = 0 ; j < arr.length ; j++) {
+        if (arr[i] === arr[j]){
+           count=count+1;
+        }
+      }
+        if(count%2 === 0){
+            return arr[i];
+        }
+    count = 0;
+   }
+ return null;
 }
-
 

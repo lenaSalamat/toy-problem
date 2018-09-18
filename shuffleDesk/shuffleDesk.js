@@ -21,5 +21,13 @@ See https://www.dartmouth.edu/~chance/teaching_aids/books_articles/Mann.pdf */
 
 var shuffleDeck = function(deck) {
   //Your code here
+  var arr = [];
+  for(var i = 0 ; i < deck.length ; i++){
+  	
+  	var shuffle = Math.floor(Math.random() * (i + 1));
+	  arr[i] = arr[shuffle];
+	  arr[shuffle] = deck[i];
+  }
+  return arr;
 }
 
