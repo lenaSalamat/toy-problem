@@ -10,4 +10,17 @@
 function primeTester (n) {
   // Write your code here, and
   // return your final answer.
+  var prime = true;
+  var math = Math.sqrt(n);
+   for(var i = 2; i <= math; i++){
+  	if(n%2 === 0){
+  	   prime = false;
+  	}
+  }
+  //console.log("lolo",prime)
+    if(n > 1){
+      return prime;
+  } else {
+  	return false;
+  }
 }

@@ -22,5 +22,11 @@ string:
 "obama"  	[ "", "a", "ab", "abm", "abmo", "abo", "am", "amo", "ao", "b", "bm", "bmo", "bo", "m", "mo", "o" ]*/
 
 var powerSet = function(str) {
-
+      var arr = [""];
+    for (var i = 0; i < str.length ; i++) {
+        for (var j = 0, length = arr.length; j < length; j++) {
+            arr.push(arr[j].concat(str[i]));
+        }
+    }
+    return arr;
 }	
