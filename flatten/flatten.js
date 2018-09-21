@@ -16,8 +16,20 @@ arrays:
 */
 
 function flatten (arrays) {
-	// write your code here 
-}
+	// write your code here
+	var arr = [];
+  function recursion(element){
+    for(var i = 0 ; i < element.length ; i++){
+      if(Array.isArray(element[i])){
+        recursion(element[i])
+      } else {
+        arr.push(element[i])
+      }
+    }
+  }
+  recursion(arrays);
+  return arr;
+} 
 
 
 
