@@ -10,8 +10,7 @@
 //output:"cat"
 
 
-
- function evenOccurrence (arr) {
+  function evenOccurrence (arr) {
   // Write your code here, and
   // return your final answer.
   var count=0;
